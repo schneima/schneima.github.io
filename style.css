@@ -1,0 +1,138 @@
+/*
+nontacet grün     color: #11F508;    
+dunkler:     color: #11BA08;    
+*/
+body
+{
+	background-color: #000;
+	color: #FFF;
+    font-family: "Arial Black", Gadget, sans-serif;
+    margin: 0px;
+    background-image: url(images/background_player.jpg);
+    background-repeat: no-repeat;
+}
+
+/*
+solution with header background image
+header
+{
+	width: 100%;
+	height: 300px;
+    margin: 0px;
+    background-color: #000;
+}
+*/
+
+#BackgroundImage
+{
+    display: block;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+nav
+{
+    float: right;
+    padding: 20px;
+    color: #11F508;
+}
+
+nav a:visited{
+    color: #11F508;
+}
+
+nav a {
+    text-decoration: none;    
+    color: #11F508;    
+}
+
+nav a:hover
+{
+    text-decoration: none;
+    color: #FFF; /*#11F508; */    
+}
+
+#menu-icon
+{
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: #111 url(images/menu_icon_white.svg) center;   
+}
+#menu-icon img
+{
+    width: 40px;
+    height: 40px;
+}
+
+ul {
+
+	list-style: none;
+}
+
+li {
+
+	display: inline-block;
+	float: left;
+	padding: 10px
+}
+
+.current {
+	color: #2262AD;
+}
+
+#Content
+{
+    width: 75%;
+    padding: 20px;
+    max-width: 1000px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: #333;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(0,0,0,0.5); 
+}
+
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
+
+	#menu-icon {
+        width: 40px;
+        height: 40px;        
+		display: block;
+        background-color: aqua;
+        background: url("images/menu_icon_white.svg");
+    }
+    
+    nav{
+        float: right;
+		position: fixed;        
+    }
+
+	nav ul, nav:active ul { 
+        position: relative;
+		display: none;
+		padding: 20px;
+		border: 5px solid #444;
+		right: 20px;
+        top: 0px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+	}
+
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+
+	nav:hover ul {
+		display: block;
+	}
+}
