@@ -10,6 +10,7 @@ body
     margin: 0px;
     background-image: url(images/background_player.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /*
@@ -21,7 +22,7 @@ header
     margin: 0px;
     background-color: #000;
 }
-*/
+
 
 #BackgroundImage
 {
@@ -29,14 +30,16 @@ header
     position: fixed;
     margin-left: auto;
     margin-right: auto;
-    z-index: 1;
 }
+*/
 
 nav
 {
-    float: right;
     padding: 20px;
     color: #11F508;
+    /*
+    background-color:rgba(10,10,10,0.5); 
+*/
 }
 
 nav a:visited{
@@ -45,7 +48,10 @@ nav a:visited{
 
 nav a {
     text-decoration: none;    
-    color: #11F508;    
+    color: #11F508;
+    background-color: black;
+    border-radius: 10px;
+    padding: 7px;
 }
 
 nav a:hover
@@ -57,30 +63,20 @@ nav a:hover
 #menu-icon
 {
     display: none;
-    width: 40px;
-    height: 40px;
-    background: #111 url(images/menu_icon_white.svg) center;   
-}
-#menu-icon img
-{
-    width: 40px;
-    height: 40px;
+    padding-left: 50px;
+    padding-top: 10px;
+    margin-left: 10px;
 }
 
 ul {
-
 	list-style: none;
+    height: 40px;
 }
 
 li {
-
 	display: inline-block;
 	float: left;
-	padding: 10px
-}
-
-.current {
-	color: #2262AD;
+    margin-left: 10px;
 }
 
 #Content
@@ -88,51 +84,54 @@ li {
     width: 75%;
     padding: 20px;
     max-width: 1000px;
-    border: 2px solid;
+    border: #333 3px solid;
     border-radius: 10px;
-    border-color: #333;
-    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     background-color:rgba(0,0,0,0.5); 
 }
 
-
 /*MEDIA QUERY*/
 @media only screen and (max-width : 640px) {
 
-	#menu-icon {
-        width: 40px;
-        height: 40px;        
+	#menu-icon {        
 		display: block;
-        background-color: aqua;
-        background: url("images/menu_icon_white.svg");
+        margin-right: 10px;
+        /*
+        background: url("images/menu_icon_green.svg");
+        background-repeat: no-repeat;
+        background-size: 40px;
+        */
     }
     
     nav{
-        float: right;
-		position: fixed;        
+		position: fixed;
+        right: 0;
+        top: 0;
+        width: 30%;
     }
 
 	nav ul, nav:active ul { 
         position: relative;
 		display: none;
-		padding: 20px;
-		border: 5px solid #444;
-		right: 20px;
-        top: 0px;
-		width: 50%;
-		border-radius: 4px 0 4px 4px;
+		
 	}
 
 	nav li {
-		text-align: center;
+		text-align: left;
 		width: 100%;
 		padding: 10px 0;
 		margin: 0;
 	}
-
+    /*
+    nav ul{ display: block;}
+*/
 	nav:hover ul {
 		display: block;
+        position: fixed;
 	}
+    
+    #Content{
+        margin-top: 100px;
+    }
 }
